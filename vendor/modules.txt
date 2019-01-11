@@ -1,0 +1,11 @@
+# github.com/andrianbdn/iospng v0.0.0-20180730113000-dccef1992541
+github.com/andrianbdn/iospng
+# github.com/pkg/errors v0.8.1
+github.com/pkg/errors
+# github.com/qiqizjl/ipapk v0.0.0-20190111151221-4bba767da2c8
+github.com/qiqizjl/ipapk
+# github.com/shogo82148/androidbinary v0.0.0-20190111050448-89dd9a91dc40
+github.com/shogo82148/androidbinary
+github.com/shogo82148/androidbinary/apk
+# howett.net/plist v0.0.0-20181124034731-591f970eefbb
+howett.net/plist
