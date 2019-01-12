@@ -96,6 +96,10 @@ func parse(downloadURL string) (*ipapk.AppInfo, error) {
 	if err != nil {
 		return nil, err
 	}
+	err = os.Remove(localFile)
+	if err != nil {
+		return nil, err
+	}
 	return appInfo, nil
 }
 
