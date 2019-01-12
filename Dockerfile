@@ -12,6 +12,8 @@ RUN  GOOS=linux CGO_ENABLED=0  go build -ldflags "-s -w"  -mod=vendor -o mobile-
 FROM scratch
 COPY --from=builder /go/mobile-parser/mobile-parser /
 COPY --from=builder /tmp /tmp
+COPY  --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+
 
 EXPOSE 8080
 ENTRYPOINT ["/mobile-parser"]
