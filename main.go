@@ -7,6 +7,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/getsentry/raven-go"
 	"github.com/qiqizjl/ipapk"
 	"image/png"
 	"io"
@@ -56,7 +57,7 @@ func fmtAppInfo(info *ipapk.AppInfo) appInfo {
 	iconBuffer := new(bytes.Buffer)
 	_ = png.Encode(iconBuffer, info.Icon)
 	result.Icon = base64.StdEncoding.EncodeToString(iconBuffer.Bytes())
-	result.IOS.AllowDevice = make([]string,0);
+	result.IOS.AllowDevice = make([]string,0)
 	if result.Platform == ipapk.PlatformIOS {
 		result.IOS.TeamName = info.IOS.TeamName
 		result.IOS.Type = info.IOS.Type
@@ -66,7 +67,7 @@ func fmtAppInfo(info *ipapk.AppInfo) appInfo {
 }
 
 func main() {
-	http.HandleFunc("/parser", ParserHandler)
+	http.HandleFunc("/parser", raven.RecoveryHandler(ParserHandler))
 	_ = http.ListenAndServe("0.0.0.0:8080", nil)
 }
 
