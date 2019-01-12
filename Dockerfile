@@ -9,10 +9,11 @@ RUN  GOOS=linux CGO_ENABLED=0  go build -ldflags "-s -w"  -mod=vendor -o mobile-
 #RUN  upx mobile-parser
 
 # Final image.
-FROM scratch
+FROM alpine
+RUN apk add --no-cache openssl
 COPY --from=builder /go/mobile-parser/mobile-parser /
-COPY --from=builder /tmp /tmp
-COPY  --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+#COPY --from=builder /tmp /tmp
+#COPY  --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 
 EXPOSE 8080

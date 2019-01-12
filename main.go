@@ -23,6 +23,11 @@ type appInfo struct {
 	Size        int64  `json:"size"`
 	Platform    int    `json:"platform"`
 	Icon        string `json:"icon"`
+	IOS         struct {
+		Type        int      `json:"type"`
+		AllowDevice []string `json:"allow_device"`
+		TeamName    string   `json:"team_name"`
+	} `json:"ios"`
 }
 
 func ParserHandler(w http.ResponseWriter, r *http.Request) {
@@ -51,6 +56,12 @@ func fmtAppInfo(info *ipapk.AppInfo) appInfo {
 	iconBuffer := new(bytes.Buffer)
 	_ = png.Encode(iconBuffer, info.Icon)
 	result.Icon = base64.StdEncoding.EncodeToString(iconBuffer.Bytes())
+	result.IOS.AllowDevice = make([]string,0);
+	if result.Platform == ipapk.PlatformIOS {
+		result.IOS.TeamName = info.IOS.TeamName
+		result.IOS.Type = info.IOS.Type
+		result.IOS.AllowDevice = info.IOS.AllowDevice
+	}
 	return result
 }
 
