@@ -16,10 +16,8 @@ github.com/pkg/errors v0.0.0-20180311214515-816c9085562c/go.mod h1:bwawxfHBFNV+L
 github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/qiqizjl/ipapk v1.1.0 h1:Rgc9ByTFddGwhCZRyf0wTcLfbC55phpghhIo89s6Ep0=
-github.com/qiqizjl/ipapk v1.1.0/go.mod h1:qK3YOen5Gx+T86vda8KsPbjMkOwnx2pUM66WlzdiNJc=
-github.com/qiqizjl/ipapk v1.1.1 h1:rk1Xqq/BDWpk0cDlJbzV7vZGpus8kzw8Q1oJDgqE+8w=
-github.com/qiqizjl/ipapk v1.1.1/go.mod h1:qK3YOen5Gx+T86vda8KsPbjMkOwnx2pUM66WlzdiNJc=
+github.com/qiqizjl/ipapk v1.1.2-0.20190122101645-34040f3bdec9 h1:HRY0GeeeDV1Pv6ZrbWdlMggXSehx4jtsYeZPNX5qLlc=
+github.com/qiqizjl/ipapk v1.1.2-0.20190122101645-34040f3bdec9/go.mod h1:qK3YOen5Gx+T86vda8KsPbjMkOwnx2pUM66WlzdiNJc=
 github.com/shogo82148/androidbinary v0.0.0-20171125034040-f2570763f91e/go.mod h1:05AjXWPWLdTIl9+REKhSmTeoJ6Wz5e9ir0Q0NRxCIKo=
 github.com/shogo82148/androidbinary v0.0.1 h1:KhyEfEaK6tq4Xv+RfkaHvMnmhvVrOtC98e1NdJXDpT8=
 github.com/shogo82148/androidbinary v0.0.1/go.mod h1:UKePOXUc1FAFsU+tKI8WtbIOnp8aT6hFjplGmlkADew=

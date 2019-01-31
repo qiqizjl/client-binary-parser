@@ -6,7 +6,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/getsentry/raven-go v0.2.0
 	github.com/kr/pty v1.1.3 // indirect
-	github.com/qiqizjl/ipapk v1.1.1
+	github.com/qiqizjl/ipapk v1.1.2-0.20190122101645-34040f3bdec9
 	github.com/shogo82148/androidbinary v0.0.1 // indirect
 	github.com/stretchr/objx v0.1.1 // indirect
 	gopkg.in/yaml.v2 v2.2.2 // indirect
